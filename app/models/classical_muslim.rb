@@ -12,6 +12,9 @@ class ClassicalMuslim < ActiveRecord::Base
   has_many :life_events
   has_many :events, through: :life_events
 
+  has_many :people_lived_ages
+  has_many :ages, through: :people_lived_ages
+
   has_many :subject_relationships, class_name: "Relationship", foreign_key: "subject_id"
   has_many :object_relationships, class_name: "Relationship", foreign_key: "object_id"
   

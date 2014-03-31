@@ -19,7 +19,7 @@ development:
   encoding: unicode
   database: Waxing_Crescent_2_development
   pool: 5
-  username: Waxing_Crescent_2
+  username: 
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -48,7 +48,7 @@ test:
   encoding: unicode
   database: Waxing_Crescent_2_test
   pool: 5
-  username: Waxing_Crescent_2
+  username: 
   password:
 
 production:
@@ -56,5 +56,5 @@ production:
   encoding: unicode
   database: Waxing_Crescent_2_production
   pool: 5
-  username: Waxing_Crescent_2
+  username: 
   password:
