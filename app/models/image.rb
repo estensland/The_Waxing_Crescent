@@ -1,5 +1,5 @@
 class Image < ActiveRecord::Base
-  # has_many
-  # belongs_to
-  # Remember to create a migration!
+  belongs_to :sub_chapter
+  belongs_to :attachable, polymorphic: true
+  has_many :comments, dependent: :destroy
 end
