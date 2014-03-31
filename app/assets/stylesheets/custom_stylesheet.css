@@ -1,0 +1,193 @@
+* {
+  padding:0;
+  margin: 0;
+}
+
+.container {
+  margin: 20px auto;
+  width: 600px;
+  padding: 0px 20px 20px 20px;
+  border: 1px dotted black;
+}
+
+th {
+  text-align: left;
+}
+
+table {
+  background-color: #eee;
+  width: 90%;
+  display: block;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+td {
+  padding: 4px;
+}
+
+.title {
+  width: 40%;
+}
+
+.author {
+  text-align: center;
+  width: 10%;
+}
+
+.link {
+  width: 1%;
+}
+
+.link a{
+  text-decoration: none;
+}
+
+.evidence_level {
+  text-align: center;
+  width: 6%;
+}
+
+.study_design {
+  text-align: center;
+  width: 20%;
+}
+
+.sub_section {
+  text-align: center;
+  width: 8%;
+}
+
+.author, .study_design {
+
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.head {
+  text-align: center;
+  color: white;
+  background-color:black;
+}
+
+.right {
+  margin-top: 40px;
+  width 45%;
+  float: right;
+  margin-right: 5%;
+}
+
+.left {
+  margin-top: 30px;
+  width 45%;
+  float: left;
+}
+
+.view_pane {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  border: 1px solid black;
+  padding-right: .7em;
+}
+
+.view_pane p{
+  padding: 6px;
+}
+
+.auth {
+  width:100%;
+  border: 0;
+  font-size: 130%;
+  background-color: black;
+  color: white;
+  padding: 1em;
+}
+
+span {
+  font-weight: bolder;
+}
+
+.odd td {
+  background-color:#ddd;
+}
+
+a{
+  text-decoration: none;
+}
+
+.nav_container {
+  width: 71%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+nav {
+  color: white;
+  background-color: black;
+  text-align: right;
+}
+
+nav a, nav span{
+  color: white;
+  padding: 10px;
+  margin-right: 4px;
+
+  /*width: 90%;*/
+}
+
+.form {
+  width:50%;
+}
+
+.page_container {
+  width: 50%;
+  margin-top: 3em; 
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+}
+
+.page_head {
+  margin-top: 0;
+  text-align: center;
+  width: 100%;
+  color:white;
+  background-color: black;
+}
+
+.bottom_rung_button {
+  text-align: center;
+  display: block;
+  width:100%;
+  margin: 1em 0;
+}
+
+
+.delete_button button{
+  padding: 1em;
+  font-size: 110%;
+  color: white;
+  background-color: red;   
+}
+
+.sign_up_button button{
+  padding: 1em;
+  font-size: 110%;
+  background-color: black;    
+  color: white;
+}
+
+.indent {
+  text-indent: 2em;
+}
+
+
+.banner_logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

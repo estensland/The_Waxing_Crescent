@@ -1,5 +1,5 @@
-<div>
-<img src="/../../assests/images/banner_test.png" alt="">
+<div class="banner_container">
+<%= image_tag "banner_test.png", class: "banner_logo" %>
 </div>
 <div class="nav_container">
   <nav>
@@ -7,6 +7,7 @@
   <a href="/classical_muslim/all"> People </a> |
   <a href="/faction/all"> Factions </a> |
   <a href="/ethnicity/all"> Genealogical/Groups </a> |
+  <a href="/maps/all"> Maps </a> |
 <% if current_user? %>  
   <span> <a href="../../../user/edit/<%= current_user.id %>"><%= current_user.email %> &nbsp</a> | <a href="../../../user/signout"> Signout </a> </span> 
 <% else %>
