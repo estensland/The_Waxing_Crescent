@@ -4,6 +4,7 @@ class CreatePeopleLivedAges < ActiveRecord::Migration
       t.integer :age_id
       t.integer :classical_muslim_id
 
+      t.timestamps      
     end
   end
 end

@@ -16,13 +16,13 @@ Title.create(user_id: 1, position: "Treasurer")
 
 Age.create(name: "Crossroads of Empires: Arabs Pre-Islam", start_date: "550", end_date: "600") #1
 Age.create(name: "Crescent Rising: The Birth of Islam", start_date: "600", end_date: "632")
-Age.create(name: "The United House of Islam: The First Caliphs and Expansion", start_date: "632", end_date: "656") #3
+Age.create(name: "Islam United: The First Caliphs and Expansion", start_date: "632", end_date: "656") #3
 Age.create(name: "Unity Shattered: The First Fitna", start_date: "656", end_date: "661")
 Age.create(name: "New Foundation: Formation of the Umayyad Caliphate", start_date: "661", end_date: "680") #5
 Age.create(name: "Festering Wounds: The Second Fitna", start_date: "680", end_date: "692")
-Age.create(name: "Muslim Empire: Consolidation of Umayyad Imperial Rule", start_date: "692", end_date: "???") #7
-Age.create(name: "The First Autumn: The Stalling and Stagnation of Umayyad Empire", start_date: "???", end_date: "743")
-Age.create(name: "The Turn of the Wheel: Third Fitna", start_date: "743", end_date: "751") #9
+Age.create(name: "Imperial Power: Consolidation of Umayyad Imperial Rule", start_date: "692", end_date: "???") #7
+Age.create(name: "Umayyad Autumn: The Stalling and Stagnation of Umayyad Empire", start_date: "???", end_date: "743")
+Age.create(name: "Turn of History: The Third Fitna", start_date: "743", end_date: "751") #9
 
 Scope.create(user_id: 1, area: "The Umayyad Caliphate") #1
 Scope.create(user_id: 1, area: "The Abbasid Caliphate")
@@ -51,8 +51,6 @@ Scope.create(user_id: 1, area: "Summer Byzantine Campaign") #23
 Scope.create(user_id: 1, area: "Armenia")
 Scope.create(user_id: 1, area: "Jazira")
 Scope.create(user_id: 1, area: "Azerbaijan")
-
-
 
 Relation.create(user_id: 1, name: "Father")
 Relation.create(user_id: 1, name: "Mother")
@@ -114,6 +112,25 @@ Faction.create(user_id: 1, name: "‘Abdallah b. ‘Ali's Caliphate/Rebellion") 
 
 Description.create(user_id: 1, table: "factions", parent_id: 1, content: "The leading Syrian Yamanis in the Third Fitna were primarily tribes of the Quda’a, especially the Kalb tribe. They had found favor with first Mu’awiya and then Marwan when he claimed and then saved Umayyad power. Interestingly however, the Quda'a were not always considered Yamanis, only after the Second Fitna did they leave the Mudaris, coincidentally as their political allies became Yamanis, and rivals the Mudaris. As the Syro-Jaziran groups began to dominate all military positions across the Empire, these Syrian Quda’a clashed with the Mudari Jazrians for positions. It is important to note that they did not always get along with the settled Yamanis of Syria, especialyl Homs, who had been cut from the Syro-Jaziran army. When al-Walid II took power, the Yamanis desired the richest governor positions, Iraq and Khurasan, currently owned by Mudaris. Citing the murder of Khalid b. ‘Abdallah al-Qasri as a motivation, they began the Third Fitna with a coup. They harnessed Yazid III's religious appeal to replace al-Walid with him. While this reaped some rewards, such as Kalbi Mansur b. Jumhur gaining the governorship of Iraq, they were short-lived. Yazid died suddenly, and his brother Ibrahim failed to keep power. Marwan II with his Jaziran Mudaris took power, and cut the Yamanis out. Their most dedicated leaders with allied-Umayyads fought against Marwan in Syria twice, but were defeated. They fled to Iraq, where they became Kharijis as yet another desperate attempt to gain an ally against the Mudaris. Marwan defeated them in Iraq, and some joined the Hashimite ‘Abdallah b. Mu’awiya, before fleeing yet again. Some allied with the Abbasids, including die-hard Kalbi Mansur b. Jumhur. Eventually, this Kalbi was killed off by Abu Muslim in the east, but Yamani identity remains in Syria to this day, strong enough to divide leading Yamani-Palestinians with Mudari-Palestinians in the 1940's")
 Description.create(user_id: 1, table: "ethnicities", parent_id: 1, content: "Arabs were the original ethnicity of Islam...by now more groups had converted however...")
+
+Image.create(path: "abbasid_chart.png")
+AssignedImage.create(image_id: 1, attachable_type: "ethnicity", attachable_id: 31)
+Image.create(path: "alid_chart.png")
+Image.create(path: "northern_chart.png")
+Image.create(path: "umayyad_chart.png")
+Image.create(path: "yamani_chart.png")
+
+
+Image.create(path: "iran_khurasan_map.png")
+Image.create(path: "iraq_syria_map.png")
+Image.create(path: "umayyad_map.png")
+
+
+Image.create(path: "umayyad_map.png")
+
+
+
+Image.create(path: "third_fitna_banner.png")
 
 
 Event.create(user_id: 1, name: "Birth")

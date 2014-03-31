@@ -36,9 +36,11 @@ ActiveRecord::Schema.define(version: 20140331161216) do
   end
 
   create_table "assigned_images", force: true do |t|
-    t.integer "image_id"
-    t.integer "parent_id"
-    t.string  "parent_type"
+    t.integer  "image_id"
+    t.integer  "attachable_id"
+    t.string   "attachable_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "classical_muslims", force: true do |t|
@@ -91,7 +93,9 @@ ActiveRecord::Schema.define(version: 20140331161216) do
   end
 
   create_table "images", force: true do |t|
-    t.string "path"
+    t.string   "path"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "life_events", force: true do |t|
@@ -104,8 +108,10 @@ ActiveRecord::Schema.define(version: 20140331161216) do
   end
 
   create_table "people_lived_ages", force: true do |t|
-    t.integer "age_id"
-    t.integer "classical_muslim_id"
+    t.integer  "age_id"
+    t.integer  "classical_muslim_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "positions", force: true do |t|

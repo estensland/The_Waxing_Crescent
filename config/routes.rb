@@ -17,6 +17,10 @@ WaxingCrescent2::Application.routes.draw do
   get '/ethnicity/all' => 'ethnicities#all'
   get '/ethnicity/show/:id' => 'ethnicities#show'
 
+  get '/ages/all' => 'ages#all'
+  get '/ages/:id' => 'ages#show',as: 'age'
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

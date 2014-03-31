@@ -1,7 +1,8 @@
 <h1 class="page_head">Home</h1>
+<h3>Ages of Early Islam:</h3>
 <ul>
   <% @ages.each do |age| %>  
-  <li><%= age.name %></li>
+  <li> <%= link_to age.name, age_path(age.id)%></li>
   <% end %>
 </ul>
 
