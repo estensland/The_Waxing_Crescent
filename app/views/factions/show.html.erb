@@ -1,0 +1,20 @@
+<h1 class="page_head">Faction Viewer</h1>
+
+<div class="people">
+  <h2>Faction: </h2> <h3><%= @faction.name %></h3>
+  <p><span>Adherents Details:</span></p>
+  <% @faction.classical_muslims.each do |member| %>
+    <p class="field_bar"> <a href="/classical_muslim/show/<%= member.id%>"><%= member.ism%> <%= member.nasab%></a></p>
+  <% end %>
+</div>
+
+<div class="descriptions">
+
+  <p><span>Description:</span></p>
+  <% if @faction.descriptions.first %>
+    <p><%= @faction.descriptions.first.content %> </p>
+  <% end %>
+
+</div>
+
+<br>

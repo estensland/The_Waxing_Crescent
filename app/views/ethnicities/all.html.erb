@@ -1,0 +1,10 @@
+<h1 class="page_head">All Ethnicities</h1>
+
+<div class="people">
+  <p><span>Ethnicities:</span></p>
+  <% Ethnicity.all.each do |ethnie| %>
+    <p class="field_bar"> <a href="/ethnie/show/<%= ethnie.id%>"><%= ethnie.name%></a></p>
+  <% end %>
+</div>
+
+<br>

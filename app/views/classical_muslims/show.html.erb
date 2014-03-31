@@ -1,0 +1,117 @@
+<h1 class="page_head">Person Viewer</h1>
+
+<div class="naming">
+  <p><span>Person:</span></p>
+  <p class="indent"><%= @person.kunya if @person.kunya %> <%= @person.ism if @person.ism %> <%= @person.nasab if @person.nasab %> <%= @person.nisbah if @person.nisbah %> <%= @person.laqab if @person.laqab %></p>
+  <br>
+  <p><span>Name Details:</span></p>
+  <% if @person.ism %>
+  <p class="field_bar"><span class="field_name">Ism:</span> <%= @person.ism%></p>
+  <% end %>
+  <% if @person.kunya %>
+  <p class="field_bar"><span class="field_name">Kunya:</span> <%= @person.kunya %></p>
+  <% end %>
+  <% if @person.nasab %>
+  <p class="field_bar"><span class="field_name">Nasab:</span> <%= @person.nasab %></p>
+  <% end %>
+  <% if @person.nisbah%>
+  <p class="field_bar"><span class="field_name">Nisbah:</span> <%= @person.nisbah %></p>
+  <% end %>
+  <% if @person.laqab %>
+  <p class="field_bar"><span class="field_name">Laqab:</span> <%= @person.laqab %></p>
+  <% end %>
+  <br>
+</div>
+
+<div class="genealogical">
+
+  <p><span>Genealogical/Ethnic Details:</span></p>
+  <% if @person.ethnicities %>
+    <% @person.ethnicities.each do |ethnicity| %>
+      <p class="indent"><a href="/ethnicity/show/<%= ethnicity.id %>"><%= ethnicity.name %></a></p>
+    <% end %>  
+  <% end %>
+
+</div>
+
+<div class="events">
+
+  <p><span>Life Events:</span></p>
+  <% if @person.life_events %>
+    <% @person.life_events.each do |event| %>
+      <p class="indent"><span><%= event.event.name %>:</span> <%= event.date %></p>
+    <% end %>  
+  <% end %>
+
+</div>
+
+<div class="factional">
+
+  <p><span>Factions:</span></p>
+  <% if @person.adherents.first %>
+    <% @person.adherents.each do |adhere| %>
+      <p><span> &nbsp <%= adhere.faction.name %>:</span></p> 
+      <p class="indent">From: <%= adhere.start_date %> </p>
+      <p class="indent"> Until: <%= adhere.start_date %></p>
+    <% end %>  
+  <% end %>
+
+</div>
+
+<div class="relational">
+
+  <p><span>Relationships:</span></p>
+  <% if @person.subject_relationships %>
+    <% @person.subject_relationships.each do |rel| %>
+      <p class="indent"><%= rel.relation.name %> of: <a href="../../classical_muslim/show/<%= rel.object.id %>"><%= rel.object.ism %></a></p>
+    <% end %>  
+  <% end %>
+    
+  <% if @person.object_relationships %>
+    <% @person.object_relationships.each do |rel| %>
+      <p class="indent">Son of: <a href="../../classical_muslim/show/<%= rel.subject.id %>"><%= rel.subject.ism %></a></p>
+    <% end %>
+  <% end %>
+  
+  <% if @person.uncles %>
+    <% @person.uncles.each do |rel| %>
+      <p class="indent">Nephew of: <a href="../../classical_muslim/show/<%= rel.object.id %>"><%= rel.object.ism %></a></p>
+    <% end %>
+  <% end %>
+
+  <% if @person.siblings %>
+    <% @person.siblings.each do |rel| %>
+      <p class="indent">Brother of: <a href="../../classical_muslim/show/<%= rel.object.id %>"><%= rel.object.ism %></a></p>
+    <% end %>
+  <% end %>
+
+  <% if @person.nephews %>
+    <% @person.nephews.flatten.each do |rel| %>
+      <p class="indent">Uncle of: <a href="../../classical_muslim/show/<%= rel.object.id %>"><%= rel.object.ism %></a></p>
+    <% end %>
+  <% end %>
+  
+</div>
+
+<div class="positions">
+
+  <p><span>Titles:</span></p>
+  <% if @person.positions %>
+    <% @person.positions.each do |position| %>
+      <p><span><%= position.title.position %> of <%= position.scope.area %></span>: From <%= position.start_date %> til <%= position.end_date %></p>
+    <% end %>  
+  <% end %>
+
+</div>
+
+<div class="descriptions">
+
+  <p><span>Description:</span></p>
+  <% if @person.descriptions.first %>
+    <p><%= @person.descriptions.first.content %> </p>
+  <% end %>
+
+</div>
+
+
+<br>

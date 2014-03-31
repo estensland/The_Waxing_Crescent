@@ -1,0 +1,10 @@
+<h1 class="page_head">All People</h1>
+
+<div class="people">
+  <p><span>Muslims of the Third Fitna:</span></p>
+  <% ClassicalMuslim.all.each do |muslim| %>
+    <p class="field_bar"> <a href="/classical_muslim/show/<%= muslim.id%>"><%= muslim.kunya%> <%= muslim.ism%> <%= muslim.nasab%> <%= muslim.laqab%> <%= muslim.nisbah%></a></p>
+  <% end %>
+</div>
+
+<br>

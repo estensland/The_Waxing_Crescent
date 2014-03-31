@@ -1,0 +1,17 @@
+<div>
+<img src="/../../assests/images/banner_test.png" alt="">
+</div>
+<div class="nav_container">
+  <nav>
+  <a class="home_link" href="/"> Home </a> | 
+  <a href="/classical_muslim/all"> People </a> |
+  <a href="/faction/all"> Factions </a> |
+  <a href="/ethnicity/all"> Genealogical/Groups </a> |
+<% if current_user? %>  
+  <span> <a href="../../../user/edit/<%= current_user.id %>"><%= current_user.email %> &nbsp</a> | <a href="../../../user/signout"> Signout </a> </span> 
+<% else %>
+  <a href="user/signin">Sign In</a>
+<% end %>
+
+ </nav>
+</div>

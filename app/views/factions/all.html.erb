@@ -1,0 +1,10 @@
+<h1 class="page_head">All Factions</h1>
+
+<div class="people">
+  <p><span>Factions:</span></p>
+  <% Faction.all.each do |faction| %>
+    <p class="field_bar"> <a href="/faction/show/<%= faction.id%>"><%= faction.name%></a></p>
+  <% end %>
+</div>
+
+<br>
