@@ -114,7 +114,7 @@ Description.create(user_id: 1, table: "factions", parent_id: 1, content: "The le
 Description.create(user_id: 1, table: "ethnicities", parent_id: 1, content: "Arabs were the original ethnicity of Islam...by now more groups had converted however...")
 
 Image.create(path: "abbasid_chart.png")
-AssignedImage.create(image_id: 1, attachable_type: "ethnicity", attachable_id: 31)
+AssignedImage.create(image_id: 1, attachable_type: "Ethnicity", attachable_id: 31)
 Image.create(path: "alid_chart.png")
 Image.create(path: "northern_chart.png")
 Image.create(path: "umayyad_chart.png")
