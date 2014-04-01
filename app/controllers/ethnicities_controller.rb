@@ -8,7 +8,8 @@ class EthnicitiesController < ApplicationController
   end
 
   def show
-    @ethnic = Ethnicity.find(params[:id])
+    @ethnie = Ethnicity.find(params[:id])
+    @images = @ethnie.images
   end
 
 end

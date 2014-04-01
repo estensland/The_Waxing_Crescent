@@ -1,11 +1,15 @@
 <h1 class="page_head">Etnicity Viewer</h1>
   
-<%= link_to "chart", "/assets/yamani_chart.png" %>
+<% if @images %>
+  <% @images.each do |image| %>
+    <% link_to image.path, image.path %>
+  <% end %>
+<% end %>
 
 <div class="people">
-  <h2>Ethnicity: </h2> <h3><%= @ethnic.name %></h3>
+  <h2>Ethnicity: </h2> <h3><%= @ethnie.name %></h3>
   <p><span>Members Details:</span></p>
-  <% @ethnic.classical_muslims.each do |member| %>
+  <% @ethnie.classical_muslims.each do |member| %>
     <p class="field_bar"> <a href="/classical_muslim/show/<%= member.id%>"><%= member.ism%> <%= member.nasab%></a></p>
   <% end %>
 </div>
@@ -13,8 +17,8 @@
 <div class="descriptions">
 
   <p><span>Description:</span></p>
-  <% if @ethnic.descriptions.first %>
-    <p><%= @ethnic.descriptions.first.content %> </p>
+  <% if @ethnie.descriptions.first %>
+    <p><%= @ethnie.descriptions.first.content %> </p>
   <% end %>
 
 </div>

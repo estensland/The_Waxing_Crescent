@@ -116,21 +116,25 @@ Description.create(user_id: 1, table: "ethnicities", parent_id: 1, content: "Ara
 Image.create(path: "abbasid_chart.png")
 AssignedImage.create(image_id: 1, attachable_type: "Ethnicity", attachable_id: 31)
 Image.create(path: "alid_chart.png")
+AssignedImage.create(image_id: 2, attachable_type: "Ethnicity", attachable_id: 29)
 Image.create(path: "northern_chart.png")
+AssignedImage.create(image_id: 3, attachable_type: "Ethnicity", attachable_id: 20)
 Image.create(path: "umayyad_chart.png")
+AssignedImage.create(image_id: 4, attachable_type: "Ethnicity", attachable_id: 30)
 Image.create(path: "yamani_chart.png")
+AssignedImage.create(image_id: 5, attachable_type: "Ethnicity", attachable_id: 5)
 
 
 Image.create(path: "iran_khurasan_map.png")
+AssignedImage.create(image_id: 6, attachable_type: "Age", attachable_id: 9)
 Image.create(path: "iraq_syria_map.png")
+AssignedImage.create(image_id: 7, attachable_type: "Age", attachable_id: 9)
 Image.create(path: "umayyad_map.png")
-
-
-Image.create(path: "umayyad_map.png")
-
-
+AssignedImage.create(image_id: 8, attachable_type: "Age", attachable_id: 9)
 
 Image.create(path: "third_fitna_banner.png")
+AssignedImage.create(image_id: 9, attachable_type: "Age", attachable_id: 9)
+
 
 
 Event.create(user_id: 1, name: "Birth")

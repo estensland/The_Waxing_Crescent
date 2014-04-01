@@ -4,7 +4,6 @@ class AgesController < ApplicationController
   protect_from_forgery with: :exception
 
   def show
-    session[:current_age_id] = params[:id]
     @age = Age.find(params[:id])
   end
 

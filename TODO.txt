@@ -1,0 +1,5 @@
+- Nest routes inside of ages, making routes with age_#{controller}_path(age, etc) so nav bar can easily update.
+
+- Make routes workable so feature testing can be done
+
+- Testing, testing, testing...to show off testing prowess
