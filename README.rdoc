@@ -2,4 +2,5 @@
 
 This is a project-in-progress that grew from a challenge to make a personal project based on my master's thesis.
 
-It is in the process of being switched from a Sinatra app, the routes are being reworked which will be followed by testing 
+It is in the process of being switched from a Sinatra app: https://github.com/estensland/Sinatra_crescent
+The routes are being reworked which will be followed by testing 
