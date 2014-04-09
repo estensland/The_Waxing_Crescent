@@ -24,9 +24,11 @@ class ClassicalMuslim < ActiveRecord::Base
 
   def siblings
     return false if self.object_relationships.first == nil
+    return_array = []
     self.object_relationships.first.subject.subject_relationships.map do |sib|
-      sib
+      return_array << sib.object unless sib.object == self
     end
+    return_array
   end
 
   def uncles
@@ -41,7 +43,7 @@ class ClassicalMuslim < ActiveRecord::Base
   def nephews
     return false unless self.siblings
     self.siblings.map do |bro|  # HEY THIS IS MAPPING LIKE MAPPING ON AN ARRAY
-      bro.object.subject_relationships.map do |son|
+      bro.subject_relationships.map do |son|
         son
       end
     end
