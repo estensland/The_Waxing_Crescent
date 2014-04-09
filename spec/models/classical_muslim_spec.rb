@@ -8,4 +8,20 @@ describe ClassicalMuslim do
       }.to change(ClassicalMuslim, :count).by(1)
     end
   end
+
+  context "#siblings" do
+    it "must return false if none" do
+      dude = ClassicalMuslim.create(ism: "Ali")
+      expect(dude.siblings).to be false
+    end
+
+    it "must return a sibling if there is one" do
+      dude = ClassicalMuslim.create(ism: "Ali")
+      father = ClassicalMuslim.create(ism: "Abi Talib")
+      brother = ClassicalMuslim.create(ism: "'Abdallah")
+      Relationship.create(subject_id: father.id, object_id: dude.id, relation_id: 1)
+      Relationship.create(subject_id: father.id, object_id: brother.id, relation_id: 1)
+      expect(dude.siblings.first).to be brother
+    end
+  end
 end

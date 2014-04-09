@@ -27,9 +27,9 @@
         null,
         null,
         1,
-        0,
-        0,
-        0,
+        2,
+        1,
+        2,
         null,
         null,
         null,
@@ -53,8 +53,18 @@
         null,
         null,
         null
+      ],
+      "/Users/Eric/coding/rails_projects/Waxing_Crescent_2/app/models/relationship.rb": [
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
       ]
     },
-    "timestamp": 1397046432
+    "timestamp": 1397047597
   }
 }

@@ -80,8 +80,8 @@
   <% end %>
 
   <% if @person.siblings %>
-    <% @person.siblings.each do |rel| %>
-      <p class="indent">Brother of: <a href="../../classical_muslim/show/<%= rel.object.id %>"><%= rel.object.ism %></a></p>
+    <% @person.siblings.each do |sib| %>
+      <p class="indent">Brother of: <a href="../../classical_muslim/show/<%= sib.id %>"><%= sib.ism %></a></p>
     <% end %>
   <% end %>
 
