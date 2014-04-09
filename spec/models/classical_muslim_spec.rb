@@ -58,7 +58,7 @@ describe ClassicalMuslim do
       Relationship.create(subject_id: father.id, object_id: dude.id, relation_id: 1)
       Relationship.create(subject_id: father.id, object_id: brother.id, relation_id: 1)
       Relationship.create(subject_id: brother.id, object_id: nephew.id, relation_id: 1)
-      expect(dude.nephews.first.to_s).to eq nephew
+      expect(dude.nephews.first).to eq [nephew]
     end
   end
 end
