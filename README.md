@@ -1,4 +1,4 @@
-README
+##The Waxing Crescent
 [![Build Status](https://travis-ci.org/estensland/The_Waxing_Crescent.svg?branch=testing)](https://travis-ci.org/estensland/The_Waxing_Crescent)
 [![Coverage Status](https://coveralls.io/repos/estensland/The_Waxing_Crescent/badge.png?branch=master)](https://coveralls.io/r/estensland/The_Waxing_Crescent?branch=master)
 
