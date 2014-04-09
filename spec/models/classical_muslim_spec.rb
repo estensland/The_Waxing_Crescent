@@ -9,6 +9,15 @@ describe ClassicalMuslim do
     end
   end
 
+  context "#description" do
+    it "must return description" do
+     
+      dude = ClassicalMuslim.create(ism: "Ali")
+      desc = Description.create(table: "classical_muslims", parent_id: dude.id, content: "Woot")
+      expect(dude.descriptions.first).to eq desc
+    end
+  end
+
   context "#siblings" do
     it "must return false if none" do
       dude = ClassicalMuslim.create(ism: "Ali")
@@ -49,7 +58,7 @@ describe ClassicalMuslim do
       dude = ClassicalMuslim.create(ism: "Ali")
       expect(dude.nephews).to be false
     end
- 
+
     it "must return a nephew if there is one" do
       dude = ClassicalMuslim.create(ism: "Ali")
       father = ClassicalMuslim.create(ism: "Abi Talib")

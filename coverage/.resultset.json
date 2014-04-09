@@ -23,7 +23,7 @@
         1,
         null,
         1,
-        0,
+        1,
         null,
         null,
         1,
@@ -65,8 +65,15 @@
         1,
         null,
         null
+      ],
+      "/Users/Eric/coding/rails_projects/Waxing_Crescent_2/app/models/description.rb": [
+        1,
+        null,
+        null,
+        null,
+        null
       ]
     },
-    "timestamp": 1397056979
+    "timestamp": 1397057283
   }
 }
