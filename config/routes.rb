@@ -3,24 +3,27 @@ WaxingCrescent2::Application.routes.draw do
 
   resources :users
 
-  get '/classical_muslim/all' => 'classical_muslims#all'
-  get '/classical_muslim/show/:id' => 'classical_muslims#show'
+  get 'classical_muslim/all' => 'classical_muslims#all'
+  get 'ages/:ages_id/classical_muslim/all' => 'classical_muslims_by_age#all'
+
+  get 'classical_muslim/show/:id' => 'classical_muslims#show'
 
   get  '/user/signin' => 'users#signin'
   post '/user/signin' => 'users#signin'
 
   get '/user/signout' => 'users#signout'
 
-  get '/faction/all' => 'factions#all'
-  get '/faction/show/:id' => 'factions#show'
+  get 'ages/:ages_id/faction/all' => 'factions#all'
+  get 'ages/:ages_id/faction/show/:id' => 'factions#show'
+  
+  get 'ethnicity/all' => 'ethnicities#all'
+  get 'ethnicity/show/:id' => 'ethnicities#show'
 
-  get '/ethnicity/all' => 'ethnicities#all'
-  get '/ethnicity/show/:id' => 'ethnicities#show'
+  get 'ages/:ages_id/ethnicity/all' => 'ethnicities_by_age#all'
+  get 'ages/:ages_id/ethnicity/show/:id' => 'ethnicities_by_age#show'
 
   get '/ages/all' => 'ages#all'
-  get '/ages/:id' => 'ages#show',as: 'age'
-
-
+  get '/ages/:id' => 'ages#show', as: 'age'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
