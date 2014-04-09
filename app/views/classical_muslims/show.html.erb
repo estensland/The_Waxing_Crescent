@@ -75,7 +75,7 @@
   
   <% if @person.uncles %>
     <% @person.uncles.each do |rel| %>
-      <p class="indent">Nephew of: <a href="../../classical_muslim/show/<%= rel.object.id %>"><%= rel.object.ism %></a></p>
+      <p class="indent">Nephew of: <a href="../../classical_muslim/show/<%= rel.id %>"><%= rel.ism %></a></p>
     <% end %>
   <% end %>
 
@@ -86,8 +86,8 @@
   <% end %>
 
   <% if @person.nephews %>
-    <% @person.nephews.flatten.each do |rel| %>
-      <p class="indent">Uncle of: <a href="../../classical_muslim/show/<%= rel.object.id %>"><%= rel.object.ism %></a></p>
+    <% @person.nephews.flatten.each do |nephew| %>
+      <p class="indent">Uncle of: <a href="../../classical_muslim/show/<%= nephew.id %>"><%= nephew.ism %></a></p>
     <% end %>
   <% end %>
   

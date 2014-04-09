@@ -34,17 +34,17 @@ class ClassicalMuslim < ActiveRecord::Base
   def uncles
     return false unless self.object_relationships.first
     return false unless self.object_relationships.first.subject.siblings
-    self.object_relationships.first.subject.siblings.map do |x|
-      x
+    self.object_relationships.first.subject.siblings.map do |uncle|
+      uncle
     end
   end
 
 
   def nephews
     return false unless self.siblings
-    self.siblings.map do |bro|  # HEY THIS IS MAPPING LIKE MAPPING ON AN ARRAY
+    self.siblings.map do |bro|  
       bro.subject_relationships.map do |son|
-        son
+        son.object
       end
     end
   end
