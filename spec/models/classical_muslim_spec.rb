@@ -49,7 +49,7 @@ describe ClassicalMuslim do
       dude = ClassicalMuslim.create(ism: "Ali")
       expect(dude.nephews).to be false
     end
-
+ 
     it "must return a nephew if there is one" do
       dude = ClassicalMuslim.create(ism: "Ali")
       father = ClassicalMuslim.create(ism: "Abi Talib")
