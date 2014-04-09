@@ -21,7 +21,7 @@ describe ClassicalMuslim do
       brother = ClassicalMuslim.create(ism: "'Abdallah")
       Relationship.create(subject_id: father.id, object_id: dude.id, relation_id: 1)
       Relationship.create(subject_id: father.id, object_id: brother.id, relation_id: 1)
-      expect(dude.siblings.first).to be brother
+      expect(dude.siblings.first).to eq brother
     end
   end
 end
