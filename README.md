@@ -10,4 +10,4 @@ The end goal is to give educators and students a source for information on peopl
 
 It is in the process of being switched from a Sinatra app: https://github.com/estensland/Sinatra_crescent
 
-Testing has begun, coverage needs to be increased next.
+Next step is to fix either fix up the methods for returning relatives, or to ditch it in favor of the ancestry gem. This would limit entries to one parent however, possibly cutting out the addition of mothers in the future
